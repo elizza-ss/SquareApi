@@ -8,9 +8,8 @@ namespace SquareWebApi
     {
         public static void Main(string[] args)
         {
-            var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+            
             var builder = WebApplication.CreateBuilder(args);
-            builder.WebHost.UseUrls($"http://*:{port}");
             builder.Services.AddHealthChecks();
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
