@@ -1,0 +1,8 @@
+﻿[build]
+builder = "dockerfile"
+dockerfilePath = "./SquareWebApi/Dockerfile"
+
+[deploy]
+startCommand = "./SquareWebApi"
+restartPolicyType = "always"
+healthcheckPath = "/health"
