@@ -1,5 +1,3 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
@@ -10,13 +8,13 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["SquareWebApi/SquareWebApi.csproj", "SquareWebApi/"]
 RUN dotnet restore "./SquareWebApi/SquareWebApi.csproj"
-COPY . .
+COPY . . 
 WORKDIR "/src/SquareWebApi"
 RUN dotnet build "./SquareWebApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./SquareWebApi.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./SquareWebApi.csproj" -c $BUILD_CONFIGURATION -o /app/publish
 
 FROM base AS final
 WORKDIR /app
