@@ -15,7 +15,7 @@ namespace SquareWebApi.Controllers
         /// <remarks>
         /// Пример запроса:
         /// 
-        ///     POST /api/CalculateTriangle
+        ///     POST /Square/CalculateTriangle
         ///     {
         ///        "A": 10,
         ///        "H": 5,
@@ -44,7 +44,7 @@ namespace SquareWebApi.Controllers
         /// <remarks>
         /// Пример запроса:
         /// 
-        ///     POST /api/CalculateCircle
+        ///     POST /Square/CalculateCircle
         ///     {
         ///        "R": 7,
         ///        "InputUnit": "м",
@@ -71,7 +71,7 @@ namespace SquareWebApi.Controllers
         /// <remarks>
         /// Пример запроса:
         /// 
-        ///     POST /api/CalculateRectangle
+        ///     POST /Square/CalculateRectangle
         ///     {
         ///        "A": 15,
         ///        "B": 10,
